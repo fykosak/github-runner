@@ -17,3 +17,6 @@ spouštět více úkolů paralelně, je potřeba vytvořit více runnerů. Kolik
 poběží lze nastavit přímo v `docker-compose.yml` přes sekci `deploy`,
 ve které je možné nastavit, kolik replikovaných kontejnerů poběží, případně
 jim lze nastavit limity na použité prostředky serveru.
+
+Pokud je v úmyslu self-hosted runnera použít, je potřeba změnit v daném
+workflow `runs-on` na `selfhosted`, případně je možné použít různé [labels](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/using-self-hosted-runners-in-a-workflow).

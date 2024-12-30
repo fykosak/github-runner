@@ -1,10 +1,7 @@
 services:
   runner:
-    #image: ghcr.io/fykosak/github-runner:latest
+    image: ghcr.io/fykosak/github-runner:master
     restart: on-failure:3
-    image: github-runner
-    build:
-      context: .
     env_file: 'env.env'
     deploy:
       mode: replicated
