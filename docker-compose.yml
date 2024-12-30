@@ -1,0 +1,7 @@
+services:
+  runner:
+    image: github-runner
+    build:
+      context: .
+    restart: on-failure:3
+    env_file: 'env.env'

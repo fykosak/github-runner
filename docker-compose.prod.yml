@@ -1,0 +1,15 @@
+services:
+  runner:
+    #image: ghcr.io/fykosak/github-runner:latest
+    restart: on-failure:3
+    image: github-runner
+    build:
+      context: .
+    env_file: 'env.env'
+    deploy:
+      mode: replicated
+      replicas: 4
+      resources:
+        limits:
+          cpus: '0.35'
+          memory: '300M'
