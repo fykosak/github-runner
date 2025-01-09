@@ -1,6 +1,6 @@
 # Github runners
 
-Docker image pro self-hosted github runnery. Kód převzat a upravit [odtud](https://github.com/beikeni/github-runner-dockerfile).
+Docker image pro self-hosted github runnery. Kód převzat a upraven [odtud](https://github.com/beikeni/github-runner-dockerfile).
 
 ## Spuštění
 - Před samotným spuštěním je potřeba získat `ACCESS_TOKEN`, který umožní se přihlásit
