@@ -21,10 +21,13 @@ RUN chown -R docker ~docker && /home/docker/actions-runner/bin/installdependenci
 
 # Install additional packages to be used in runs
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
-	git
+	git sudo
+
+# Add docker user to sudoers
+RUN echo 'docker ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 # Copy and make executable the starting script
-COPY entrypoint.sh entrypoint.sh
+COPY entrypoint.sh .
 RUN chmod +x entrypoint.sh
 
 # since the config and run script for actions are not allowed to be run by root,
